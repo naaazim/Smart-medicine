@@ -1,0 +1,93 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    animation: changeBG 5s forwards;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@keyframes changeBG{
+    0%{
+        background-color: black;
+    }
+    50%{
+        background-color: black;
+    }
+    100%{
+
+        background: url(bg1.jpg);
+        background-size: cover;
+    }
+}
+
+@keyframes entrance{
+    from{
+        margin-top: 15%;
+        color: #fff;
+    }
+    tp{
+        margin-top: 2%;
+        color: #FAC921;
+    }
+}
+
+@keyframes invisible{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes dynamique{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.06);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+div{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    height: auto;
+    width: 80%;
+    animation: invisible 3s ease-in-out;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 5%;
+    animation: entrance 2s ease-in-out;
+}
+
+h2{
+    animation: dynamique 3s infinite ease-in-out;
+    text-align: center;
+}
+
+p{
+    margin: 5%;
+    font-size: 20px;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    div{
+        border: none;
+        width: 100%;
+    }
+}

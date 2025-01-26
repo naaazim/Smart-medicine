@@ -1,0 +1,265 @@
+body{
+    background-color: black;
+    animation: changeBG 5s forwards;
+}
+
+@keyframes changeBG{
+    0%{
+        background-color: black;
+    }
+    50%{
+        background-color: black;
+    }
+    100%{
+
+        background: url(bg2.jpg);
+        background-size: cover;
+    }
+}
+
+.container1{
+    margin: 100px auto auto auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    animation: entrance 2s ease-in-out;
+}
+
+@keyframes entrance{
+    from{
+        margin-top: 35%;
+        
+    }
+    to{
+        margin: 100px auto auto auto;
+    }
+}
+
+.titre1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    animation: invisible 1s ease-in-out,dynamique 4s infinite ease-in-out;
+}
+
+@keyframes dynamique{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.paragraphe1{
+    display: flex;
+    text-align: center;  
+    margin: 3% 5% 5% 5%;
+    animation: invisible 2s ease-in-out;
+}
+
+@keyframes invisible{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.smartmedicine{
+    width: 15%;
+    position: relative;
+    margin: 3% auto auto 26%;
+    animation: invisible 4s ease-in-out;
+}
+
+.smartmedicine:hover{
+    transition: 1s;
+    border-radius: 20%;
+    transform: scale(1.15);
+}
+
+.container2{
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: -9% auto auto 43%;;
+    height: auto;
+    width: 31%;
+}
+
+.titre2{
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    animation: invisible 3s ease-in-out,dynamique 4s infinite ease-in-out;
+}
+
+.paragraphe2{
+    display: flex;
+    text-align: center;  
+    margin: 0% 5% 5% 5%;
+    animation: invisible 3s ease-in-out;
+}
+
+.exemple{
+    color: #fff;
+    font-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: invisible 3s ease-in-out;
+    font-style: italic;
+    margin-top: 2%;
+}
+
+.container3{
+    margin: 2% auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    backdrop-filter: blur(3px);
+}
+
+.titre3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: Times, Times New Roman, serif;
+    animation: invisible 3s ease-in-out,dynamique 4s infinite ease-in-out;
+}
+
+
+.paragraphe3{
+    display: flex;
+    text-align: center;  
+    margin: 0% 5% 5% 5%;
+    animation: invisible 3s ease-in-out;
+}
+
+.machinelearning{
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    margin: 1% auto 6% auto;
+    border: 2px solid #fff;
+    animation: invisible 4s ease-in-out;
+}
+
+.machinelearning:hover{
+    transition: 1s;
+    border-radius: 20%;
+    transform: scale(1.15);
+}
+
+.container4{
+    margin: 2% auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    backdrop-filter: blur(3px);
+}
+
+.titre4{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: Times, Times New Roman, serif;
+    animation: invisible 3s ease-in-out,dynamique 4s infinite ease-in-out;
+}
+
+.paragraphe4{
+    display: flex;
+    text-align: center;  
+    margin: 0% 5% 5% 5%;
+    animation: invisible 3s ease-in-out;
+    justify-content: center;
+}
+
+.photo{
+    display: flex;
+    justify-content: center;
+}
+
+.deeplearning{
+    width: 18vw;
+    height: 64%;
+    margin: 16.5% 0 15% -7%;
+    border: 2px solid #fff;
+    animation: invisible 4s ease-in-out;
+}
+
+.deeplearning:hover{
+    transition: 1s;
+    border-radius: 20%;
+    transform: scale(1.15);
+}
+
+.deeplearning2{
+    width: 20vw;
+    margin: 15% 0 15% 7%;
+    border: 2px solid #fff;
+    animation: invisible 4s ease-in-out;
+    height: 64%;
+}
+
+.deeplearning2:hover{
+    transition: 1s;
+    border-radius: 20%;
+    transform: scale(1.15);
+}
+
+@media screen and (max-width: 768px) {
+    .container1{
+        width: 100%;
+        border: none;
+    }
+    .smartmedicine{
+        width: 26%;
+        position: absolute;
+        margin: 5% auto 5% 35%;
+    }
+    .container2{
+        margin: 29% auto 10% 7%;
+        width: 85%;
+    }
+    .container3{
+        margin: 10% auto;
+        width: 85%;
+    }
+    .container4{
+        width: 85%;
+    }
+}
