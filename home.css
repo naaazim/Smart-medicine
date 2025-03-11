@@ -1,6 +1,9 @@
-body{
+html{
     background-color: black;
     animation: changeBG 5s forwards;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
 }
 
 @keyframes changeBG{
