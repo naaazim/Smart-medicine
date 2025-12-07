@@ -1,0 +1,279 @@
+/* ============================================
+   DETECTION/PREVENTION PAGE STYLES
+   ============================================ */
+
+/* Page Wrapper */
+.content-wrapper {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: var(--space-20);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    position: relative;
+}
+
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.2) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.content-wrapper .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+/* Page Header */
+.content-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    padding: var(--space-12) 0;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-6);
+    background: var(--medical-gradient);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-6);
+    box-shadow: 0 4px 20px rgba(79, 172, 254, 0.4);
+}
+
+.badge-icon {
+    font-size: var(--text-lg);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.content-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--space-4);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+
+.content-section {
+    animation-fill-mode: both;
+}
+
+/* Section Styling */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: var(--space-8);
+    background: var(--medical-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-icon {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    background: var(--medical-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Content Blocks */
+.content-block {
+    margin-top: var(--space-6);
+}
+
+.block-title {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-bottom: var(--space-4);
+}
+
+.block-text {
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
+    line-height: 1.8;
+    opacity: 0.95;
+    margin-bottom: var(--space-4);
+}
+
+.block-text:last-child {
+    margin-bottom: 0;
+}
+
+.intro-text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    opacity: 0.95;
+    margin-bottom: var(--space-8);
+    font-weight: 500;
+}
+
+/* Algorithm Cards */
+.algorithm-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.algorithm-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    transition: var(--transition-base);
+}
+
+.algorithm-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-cyan);
+    transform: translateX(10px);
+    box-shadow: 0 10px 40px rgba(79, 172, 254, 0.3);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.card-number {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    background: var(--medical-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.card-badge {
+    padding: var(--space-2) var(--space-4);
+    background: var(--medical-gradient);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-body {
+    padding-left: var(--space-2);
+}
+
+.card-text {
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.card-text strong {
+    color: var(--accent-cyan);
+    font-weight: 600;
+}
+
+/* Conclusion Card */
+.conclusion-card {
+    text-align: center;
+    padding: var(--space-10);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(79, 172, 254, 0.2) 100%);
+    border: 2px solid var(--accent-cyan);
+}
+
+.conclusion-icon {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.conclusion-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    background: var(--medical-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.conclusion-text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.conclusion-text strong {
+    color: var(--accent-cyan);
+    font-weight: 700;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding-top: 80px;
+    }
+
+    .content-header {
+        margin-bottom: var(--space-10);
+        padding: var(--space-8) 0;
+    }
+
+    .main-content {
+        gap: var(--space-8);
+    }
+
+    .algorithm-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .conclusion-card {
+        padding: var(--space-8);
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding-top: 70px;
+        padding-bottom: var(--space-12);
+    }
+
+    .algorithm-card {
+        padding: var(--space-6);
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .conclusion-card {
+        padding: var(--space-6);
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Smart Medicine</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="icone.jpg">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="home.html" class="nav-link active">ABOUT</a>
+            <a href="articles.html" class="nav-link">ARTICLES</a>
+            <a href="glossary.html" class="nav-link">GLOSSARY</a>
+            <a href="references.html" class="nav-link">REFERENCES</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-wrapper">
+        <div class="container">
+            <!-- Page Header -->
+            <header class="page-header animate-fadeInDown">
+                <h1 class="page-title">Understanding <span class="text-gradient">Algorithms in Medicine</span></h1>
+                <p class="page-subtitle">Exploring the power of AI and machine learning in healthcare</p>
+            </header>
+
+            <!-- What is an Algorithm Section -->
+            <section class="content-section animate-fadeInUp delay-200">
+                <div class="glass-card">
+                    <div class="section-icon">🔬</div>
+                    <h2 class="section-title">What is an Algorithm?</h2>
+                    <p class="section-text">
+                        An algorithm is a set of logical instructions designed to perform a specific task and solve a
+                        problem efficiently.
+                        In the field of medicine, they are used to improve diagnostics and predict outcomes.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Smart Medicine Image -->
+            <div class="image-showcase animate-scaleIn delay-300">
+                <div class="image-wrapper">
+                    <img src="smartmedicine.jpeg" alt="Smart Medicine" class="showcase-image">
+                    <div class="image-overlay">
+                        <span class="image-caption">AI-Powered Healthcare</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Algorithm Types Section -->
+            <section class="content-section animate-fadeInUp delay-400">
+                <div class="glass-card">
+                    <div class="section-icon">🤖</div>
+                    <h2 class="section-title">What kind of algorithms are used in medicine?</h2>
+                    <div class="algorithm-types">
+                        <div class="algorithm-type">
+                            <div class="type-number">01</div>
+                            <div class="type-content">
+                                <h3 class="type-title">Machine Learning</h3>
+                                <p class="type-description">
+                                    To analyze data and detect anomalies by automating machines.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="algorithm-type">
+                            <div class="type-number">02</div>
+                            <div class="type-content">
+                                <h3 class="type-title">Deep Learning</h3>
+                                <p class="type-description">
+                                    More complex and having a large database, it learns and improves with use.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Examples Header -->
+            <div class="examples-header animate-fadeInUp delay-500">
+                <h2 class="examples-title">
+                    <span class="title-icon">💡</span>
+                    Could you illustrate these two algorithms with an example from the medical field?
+                </h2>
+            </div>
+
+            <!-- Machine Learning Example -->
+            <section class="example-section animate-slideInLeft delay-600">
+                <div class="glass-card example-card">
+                    <div class="example-header">
+                        <div class="example-badge">Machine Learning</div>
+                        <div class="example-icon">🧬</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 class="example-title">Cancer Detection with MRI Analysis</h3>
+                        <p class="example-text">
+                            A machine learning algorithm can examine MRI images to identify early signs of cancer.
+                            By training on thousands of images, the model learns to identify and compare patterns that
+                            could suggest the presence of tumors, assisting doctors in making quicker and more accurate
+                            diagnoses.
+                        </p>
+                        <div class="example-image-wrapper">
+                            <img src="machinelearning.jpg" alt="Machine Learning in Medicine" class="example-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deep Learning Example -->
+            <section class="example-section animate-slideInRight delay-700">
+                <div class="glass-card example-card">
+                    <div class="example-header">
+                        <div class="example-badge">Deep Learning</div>
+                        <div class="example-icon">🧠</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 class="example-title">Advanced Cancer Cell Identification</h3>
+                        <p class="example-text">
+                            In cancer detection, deep learning algorithms are capable of analyzing medical images to
+                            pinpoint
+                            cancerous cells. Unlike machine learning, which depends on manually defined features, deep
+                            learning
+                            autonomously extracts relevant patterns from the data. This allows doctors to identify
+                            cancer at an
+                            earlier stage and intervene more effectively.
+                        </p>
+                        <div class="example-images-grid">
+                            <div class="grid-image-wrapper">
+                                <img src="deeplearning.jpg" alt="Deep Learning Analysis 1" class="grid-image">
+                            </div>
+                            <div class="grid-image-wrapper">
+                                <img src="deeplearning2.jpg" alt="Deep Learning Analysis 2" class="grid-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section, .example-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

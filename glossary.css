@@ -1,0 +1,184 @@
+/* ============================================
+   GLOSSARY PAGE STYLES
+   ============================================ */
+
+/* Page Wrapper */
+.glossary-wrapper {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: var(--space-20);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f5576c 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    position: relative;
+}
+
+.glossary-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(245, 87, 108, 0.2) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.glossary-wrapper .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Page Header */
+.glossary-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    padding: var(--space-12) 0;
+}
+
+.glossary-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.title-icon {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    animation: float 3s ease-in-out infinite;
+}
+
+.glossary-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    opacity: 0.9;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+/* Glossary Grid */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Term Card */
+.term-card {
+    position: relative;
+    padding: var(--space-8);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--glass-shadow);
+    transition: var(--transition-base);
+    overflow: hidden;
+}
+
+.term-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--medical-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-base);
+}
+
+.term-card:hover::before {
+    transform: scaleX(1);
+}
+
+.term-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(79, 172, 254, 0.4);
+    border-color: var(--accent-cyan);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.term-letter {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    background: var(--medical-gradient);
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+    opacity: 0.8;
+    transition: var(--transition-base);
+}
+
+.term-card:hover .term-letter {
+    transform: scale(1.1) rotate(10deg);
+    opacity: 1;
+}
+
+.term-title {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--accent-cyan);
+    padding-right: var(--space-12);
+}
+
+.term-definition {
+    font-size: clamp(0.95rem, 2vw, 1.0625rem);
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .glossary-wrapper {
+        padding-top: 80px;
+    }
+
+    .glossary-header {
+        margin-bottom: var(--space-10);
+        padding: var(--space-8) 0;
+    }
+
+    .glossary-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .glossary-wrapper {
+        padding-top: 70px;
+        padding-bottom: var(--space-12);
+    }
+
+    .term-card {
+        padding: var(--space-6);
+    }
+
+    .term-letter {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-xl);
+    }
+}

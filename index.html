@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Medicine - Discover the Power of Algorithms in Medicine</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icone.jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link active">HOME</a>
+            <a href="home.html" class="nav-link">ABOUT</a>
+            <a href="articles.html" class="nav-link">ARTICLES</a>
+            <a href="glossary.html" class="nav-link">GLOSSARY</a>
+            <a href="references.html" class="nav-link">REFERENCES</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-background"></div>
+        <div class="particles" id="particles"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge animate-fadeInDown">
+                <span class="badge-icon">🧬</span>
+                <span>AI-Powered Healthcare</span>
+            </div>
+            
+            <h1 class="hero-title animate-fadeInUp delay-200">
+                <span class="title-line">WELCOME TO</span>
+                <span class="title-highlight">SMART MEDICINE</span>
+            </h1>
+            
+            <p class="hero-subtitle animate-fadeInUp delay-400">
+                Discover the power of algorithms in modern medicine
+            </p>
+            
+            <div class="hero-cta animate-fadeInUp delay-600">
+                <a href="home.html" class="btn btn-primary btn-lg">
+                    Explore Now
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="articles.html" class="btn btn-secondary btn-lg">
+                    Read Articles
+                </a>
+            </div>
+            
+            <div class="hero-features animate-fadeInUp delay-800">
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-text">
+                        <strong>Machine Learning</strong>
+                        <span>Advanced Detection</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🧠</div>
+                    <div class="feature-text">
+                        <strong>Deep Learning</strong>
+                        <span>Intelligent Analysis</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚕️</div>
+                    <div class="feature-text">
+                        <strong>Medical AI</strong>
+                        <span>Better Diagnostics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator animate-float">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Particle animation
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary - Smart Medicine</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="glossary.css">
+    <link rel="icon" href="icone.jpg">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="home.html" class="nav-link">ABOUT</a>
+            <a href="articles.html" class="nav-link">ARTICLES</a>
+            <a href="glossary.html" class="nav-link active">GLOSSARY</a>
+            <a href="references.html" class="nav-link">REFERENCES</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="glossary-wrapper">
+        <div class="container">
+            <!-- Page Header -->
+            <header class="glossary-header animate-fadeInDown">
+                <h1 class="glossary-title">
+                    <span class="title-icon">📖</span>
+                    <span class="text-gradient">Glossary</span>
+                </h1>
+                <p class="glossary-subtitle">Key terms and definitions</p>
+            </header>
+
+            <!-- Glossary Grid -->
+            <div class="glossary-grid">
+                <!-- Term 1 -->
+                <div class="term-card animate-fadeInUp delay-200">
+                    <div class="term-letter">A</div>
+                    <h3 class="term-title">Algorithm</h3>
+                    <p class="term-definition">
+                        A series of logical instructions designed to solve a problem or complete a specific task.
+                    </p>
+                </div>
+
+                <!-- Term 2 -->
+                <div class="term-card animate-fadeInUp delay-250">
+                    <div class="term-letter">B</div>
+                    <h3 class="term-title">Big Data</h3>
+                    <p class="term-definition">
+                        Extremely large datasets that can be analyzed computationally to reveal patterns, trends, and
+                        associations, especially in healthcare.
+                    </p>
+                </div>
+
+                <!-- Term 3 -->
+                <div class="term-card animate-fadeInUp delay-300">
+                    <div class="term-letter">C</div>
+                    <h3 class="term-title">Cancer</h3>
+                    <p class="term-definition">
+                        A disease where cells in the body grow uncontrollably, potentially forming tumors and affecting
+                        organs.
+                    </p>
+                </div>
+
+                <!-- Term 4 -->
+                <div class="term-card animate-fadeInUp delay-350">
+                    <div class="term-letter">D</div>
+                    <h3 class="term-title">Database</h3>
+                    <p class="term-definition">
+                        An organized system for storing and managing large amounts of information, such as those used in
+                        deep learning for analyzing medical data.
+                    </p>
+                </div>
+
+                <!-- Term 5 -->
+                <div class="term-card animate-fadeInUp delay-400">
+                    <div class="term-letter">D</div>
+                    <h3 class="term-title">Deep Learning</h3>
+                    <p class="term-definition">
+                        A more complex branch of machine learning, allowing machines to learn autonomously and improve
+                        over time without human intervention, for example, detecting cancerous cells in medical images.
+                    </p>
+                </div>
+
+                <!-- Term 6 -->
+                <div class="term-card animate-fadeInUp delay-450">
+                    <div class="term-letter">M</div>
+                    <h3 class="term-title">Machine Learning</h3>
+                    <p class="term-definition">
+                        A type of algorithm that enables machines to learn from data and make predictions, such as
+                        detecting signs of cancer in medical images.
+                    </p>
+                </div>
+
+                <!-- Term 7 -->
+                <div class="term-card animate-fadeInUp delay-500">
+                    <div class="term-letter">P</div>
+                    <h3 class="term-title">Prevention</h3>
+                    <p class="term-definition">
+                        Actions taken to reduce the risk of diseases, like cancer, by analyzing medical data or changing
+                        lifestyle habits.
+                    </p>
+                </div>
+
+                <!-- Term 8 -->
+                <div class="term-card animate-fadeInUp delay-550">
+                    <div class="term-letter">S</div>
+                    <h3 class="term-title">Sybil</h3>
+                    <p class="term-definition">
+                        An algorithm developed by Massachusetts General Hospital and MIT, used to predict lung cancer
+                        risk with high accuracy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
