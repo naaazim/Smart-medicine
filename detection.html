@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
     <meta charset="UTF-8">
@@ -14,14 +13,28 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="home.html" class="nav-link">ABOUT</a>
-            <a href="articles.html" class="nav-link">ARTICLES</a>
-            <a href="glossary.html" class="nav-link">GLOSSARY</a>
-            <a href="references.html" class="nav-link">REFERENCES</a>
-            <a href="quiz.html" class="nav-link">QUIZ</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+        <div class="nav-shell">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">SM</span>
+                <span class="brand-text">
+                    <span class="brand-name">Smart Medicine</span>
+                    <span class="brand-tagline">AI & Health</span>
+                </span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home.html" class="nav-link">About</a>
+                <a href="articles.html" class="nav-link active">Articles</a>
+                <a href="glossary.html" class="nav-link">Glossary</a>
+                <a href="references.html" class="nav-link">References</a>
+                <a href="quiz.html" class="nav-link">Quiz</a>
+                <a href="contact.html" class="nav-link nav-cta">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -144,6 +157,7 @@
         </div>
     </div>
 
+    <script src="navbar.js"></script>
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -157,30 +171,4 @@
     </script>
 </body>
 
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detection</title>
-    <link rel="stylesheet" href="detection.css">
-</head>
-<body>
-    <div>
-        <h1>English presentation</h1>
-        <h2>How algorithms can detect cancerous cells</h2>
-        <p>Let's start by explaining the main concept our our topic: an algorithm <br><br>
-
-            An algorithm is a series of logical instructions that allow you to perform a specific task in order to solve a problem. Nowadays, algorithms are widely used in medicine to improve diagnostics thanks to their ability to process large amounts of data efficiently and quickly. <br><br>In the field of medicine, they have become indispensable tools to predict patient outcomes and reduce human errors.
-
-            <br><br>We distinguish two types of algorithms to detect health anomalies and prevent them: <br><br>
-            
-            First, we have <strong>machine learning algorithms</strong>: These are about automating machines through data so they can predict diseases and make decisions. For example, in the medical field, a machine learning algorithm can analyze X-ray images to detect early signs of cancer. By training the model on thousands of images, it learns to compare them and recognize patterns that may indicate tumors, helping doctors make faster and more accurate diagnoses.
-            <br><br>
-            Then, we have <strong>deep learning algorithms</strong>, which are more complex and depend on large databases. They are autonomous and capable of learning and improving with user-machine interactions and error reporting. For example, in cancer detection, deep learning algorithms can analyze medical images to identify cancerous cells. Unlike machine learning, which requires predefined features, deep learning automatically extracts relevant information from data. This helps doctors detect cancer earlier and take action at the right time.
-            <br><br>
-            These two algorithms are very similar, but the main difference is that machine learning needs human intervention to define features, while deep learning is autonomous, improves by itself, and detects anomalies. Both of them are essential in healthcare and are extremely helpful for medical personnel.</p>
-    </div>
-    
-</body>
->>>>>>> 8235893944aa226df3e57fe65da93eabdf850617
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
     <meta charset="UTF-8">
@@ -14,14 +13,28 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-link active">HOME</a>
-            <a href="home.html" class="nav-link">ABOUT</a>
-            <a href="articles.html" class="nav-link">ARTICLES</a>
-            <a href="glossary.html" class="nav-link">GLOSSARY</a>
-            <a href="references.html" class="nav-link">REFERENCES</a>
-            <a href="quiz.html" class="nav-link">QUIZ</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+        <div class="nav-shell">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">SM</span>
+                <span class="brand-text">
+                    <span class="brand-name">Smart Medicine</span>
+                    <span class="brand-tagline">AI & Health</span>
+                </span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="home.html" class="nav-link">About</a>
+                <a href="articles.html" class="nav-link">Articles</a>
+                <a href="glossary.html" class="nav-link">Glossary</a>
+                <a href="references.html" class="nav-link">References</a>
+                <a href="quiz.html" class="nav-link">Quiz</a>
+                <a href="contact.html" class="nav-link nav-cta">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -86,6 +99,7 @@
         </div>
     </div>
 
+    <script src="navbar.js"></script>
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -113,29 +127,4 @@
     </script>
 </body>
 
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart medicine</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icone.jpg">
-</head>
-<body>
-    <div class="navbar">
-        <a href="home.html" class="boutton">HOME</a>
-        <a href="articles.html" class="boutton">ARTICLES</a>
-        <a href="glossary.html" class="boutton">GLOSSARY</a>
-        <a href="references.html" class="boutton">REFERENCES</a>
-        <a href="contact.html" class="boutton">CONTACT</a>
-    </div>
-    <h1>
-        <div class="header-group">
-            <span class="welcome">WELCOME</span>
-            <span class="ligne"> TO OUR WEBSITE</span>
-        </div>
-        <span class="ligne2"> WHERE YOU CAN DISCOVER THE POWER OF ALGORITHMS IN MEDICINE</span>
-    </h1>
-</body>
->>>>>>> 8235893944aa226df3e57fe65da93eabdf850617
 </html>

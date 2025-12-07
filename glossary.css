@@ -1,150 +1,126 @@
-<<<<<<< HEAD
 /* ============================================
    GLOSSARY PAGE STYLES
    ============================================ */
 
 /* Page Wrapper */
 .glossary-wrapper {
-    min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: var(--space-20);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f5576c 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-    position: relative;
+  min-height: 100vh;
+  padding-top: 110px;
+  padding-bottom: var(--space-20);
+  background: linear-gradient(135deg, #0c182c 0%, #0f233c 45%, #122f49 100%);
+  background-size: 320% 320%;
+  animation: gradientShift 18s ease infinite;
+  position: relative;
 }
 
 .glossary-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(245, 87, 108, 0.2) 0%, transparent 50%);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.18), transparent 38%),
+    url('bg3.jpg') center/cover;
+  opacity: 0.2;
+  mix-blend-mode: soft-light;
+  z-index: 0;
 }
 
 .glossary-wrapper .container {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Page Header */
 .glossary-header {
-    text-align: center;
-    margin-bottom: var(--space-16);
-    padding: var(--space-12) 0;
+  text-align: center;
+  margin-bottom: var(--space-14);
+  padding: var(--space-10) 0;
 }
 
 .glossary-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    margin-bottom: var(--space-4);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-4);
-    flex-wrap: wrap;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
 }
 
 .title-icon {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    animation: float 3s ease-in-out infinite;
+  font-size: clamp(2rem, 6vw, 4rem);
+  animation: float 3s ease-in-out infinite;
 }
 
 .glossary-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    opacity: 0.9;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.9;
+  font-weight: 500;
 }
 
 /* Glossary Grid */
 .glossary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--space-6);
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
 }
 
 /* Term Card */
 .term-card {
-    position: relative;
-    padding: var(--space-8);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--glass-shadow);
-    transition: var(--transition-base);
-    overflow: hidden;
+  padding: var(--space-8);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
 }
 
-.term-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--medical-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: var(--transition-base);
-}
-
-.term-card:hover::before {
-    transform: scaleX(1);
+.term-card::after {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.2), transparent 55%);
+  opacity: 0;
+  transition: var(--transition-base);
 }
 
 .term-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 50px rgba(79, 172, 254, 0.4);
-    border-color: var(--accent-cyan);
-    background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 14px 36px rgba(34, 211, 238, 0.28);
+}
+
+.term-card:hover::after {
+  opacity: 1;
 }
 
 .term-letter {
-    position: absolute;
-    top: var(--space-4);
-    right: var(--space-4);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--text-2xl);
-    font-weight: 800;
-    background: var(--medical-gradient);
-    border-radius: var(--radius-full);
-    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
-    opacity: 0.8;
-    transition: var(--transition-base);
-}
-
-.term-card:hover .term-letter {
-    transform: scale(1.1) rotate(10deg);
-    opacity: 1;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-lg);
+  background: var(--medical-gradient);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+  box-shadow: 0 10px 24px rgba(34, 211, 238, 0.35);
 }
 
 .term-title {
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    font-weight: 700;
-    margin-bottom: var(--space-4);
-    color: var(--accent-cyan);
-    padding-right: var(--space-12);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
 }
 
 .term-definition {
-    font-size: clamp(0.95rem, 2vw, 1.0625rem);
-    line-height: 1.7;
-    opacity: 0.95;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  opacity: 0.9;
 }
 
 /* ============================================
@@ -152,126 +128,19 @@
    ============================================ */
 
 @media (max-width: 768px) {
-    .glossary-wrapper {
-        padding-top: 80px;
-    }
+  .glossary-wrapper {
+    padding-top: 90px;
+  }
 
-    .glossary-header {
-        margin-bottom: var(--space-10);
-        padding: var(--space-8) 0;
-    }
-
-    .glossary-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-    }
+  .glossary-header {
+    margin-bottom: var(--space-10);
+    padding: var(--space-8) 0;
+  }
 }
 
 @media (max-width: 480px) {
-    .glossary-wrapper {
-        padding-top: 70px;
-        padding-bottom: var(--space-12);
-    }
-
-    .term-card {
-        padding: var(--space-6);
-    }
-
-    .term-letter {
-        width: 40px;
-        height: 40px;
-        font-size: var(--text-xl);
-    }
+  .glossary-wrapper {
+    padding-top: 78px;
+    padding-bottom: var(--space-12);
+  }
 }
-=======
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    animation: changeBG 3s forwards;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-@keyframes changeBG{
-    0%{
-        background-color: black;
-    }
-    50%{
-        background-color: black;
-    }
-    100%{
-
-        background: url(bg3.jpg);
-        background-size: cover;
-    }
-}
-
-@keyframes entrance{
-    from{
-        margin-top: 15%;
-    }
-    tp{
-        margin-top: 2%;
-    }
-}
-
-@keyframes invisible{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes dynamique{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.06);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-
-div{
-    border: 2px solid #FAC921;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    height: auto;
-    width: 60%;
-    animation: entrance 2s ease-in-out;
-}
-
-h1{
-    text-align: center;
-    text-decoration: underline;
-    margin-top: 5%;
-    animation: entrance 2s ease-in-out, dynamique 3s infinite ease-in-out;
-}
-
-p{
-    margin: 5%;
-    font-size: 20px;
-    font-style: italic;
-}
-
-strong{
-    color: #FAC921;
-    font-size: 21px;
-}
-
-@media screen and (max-width: 768px) {
-    div{
-        width: 90%;
-    }
-}
->>>>>>> 8235893944aa226df3e57fe65da93eabdf850617

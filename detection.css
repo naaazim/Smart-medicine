@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ============================================
    DETECTION/PREVENTION PAGE STYLES
    ============================================ */
@@ -6,30 +5,27 @@
 /* Page Wrapper */
 .content-wrapper {
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 110px;
     padding-bottom: var(--space-20);
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
+    background: linear-gradient(135deg, #0b1627 0%, #0f213c 45%, #12324d 100%);
+    background-size: 320% 320%;
+    animation: gradientShift 18s ease infinite;
     position: relative;
 }
 
 .content-wrapper::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.2) 0%, transparent 50%);
+    inset: 0;
+    background: radial-gradient(circle at 18% 50%, rgba(34, 211, 238, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 82% 80%, rgba(99, 102, 241, 0.16) 0%, transparent 45%);
     z-index: 0;
 }
 
 .content-wrapper .container {
     position: relative;
     z-index: 1;
-    max-width: 900px;
+    max-width: 940px;
 }
 
 /* Page Header */
@@ -51,7 +47,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: var(--space-6);
-    box-shadow: 0 4px 20px rgba(79, 172, 254, 0.4);
+    box-shadow: 0 4px 20px rgba(34, 211, 238, 0.35);
 }
 
 .badge-icon {
@@ -140,18 +136,19 @@
 }
 
 .algorithm-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: var(--radius-xl);
     padding: var(--space-8);
     transition: var(--transition-base);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .algorithm-card:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--accent-cyan);
     transform: translateX(10px);
-    box-shadow: 0 10px 40px rgba(79, 172, 254, 0.3);
+    box-shadow: 0 12px 40px rgba(34, 211, 238, 0.3);
 }
 
 .card-header {
@@ -200,7 +197,7 @@
 .conclusion-card {
     text-align: center;
     padding: var(--space-10);
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(79, 172, 254, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.18) 0%, rgba(99, 102, 241, 0.18) 100%);
     border: 2px solid var(--accent-cyan);
 }
 
@@ -237,7 +234,7 @@
 
 @media (max-width: 768px) {
     .content-wrapper {
-        padding-top: 80px;
+        padding-top: 90px;
     }
 
     .content-header {
@@ -260,7 +257,7 @@
 
 @media (max-width: 480px) {
     .content-wrapper {
-        padding-top: 70px;
+        padding-top: 78px;
         padding-bottom: var(--space-12);
     }
 
@@ -278,98 +275,3 @@
         padding: var(--space-6);
     }
 }
-=======
-body {
-    background-color: black;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    animation: changeBG 5s forwards;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-@keyframes changeBG{
-    0%{
-        background-color: black;
-    }
-    50%{
-        background-color: black;
-    }
-    100%{
-
-        background: url(bg0.jpg);
-        background-size: cover;
-    }
-}
-
-@keyframes entrance{
-    from{
-        margin-top: 15%;
-        color: #fff;
-    }
-    tp{
-        margin-top: 2%;
-        color: #FAC921;
-    }
-}
-
-@keyframes invisible{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes dynamique{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.06);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-
-div{
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    border: 2px solid #fff;
-    height: auto;
-    width: 80%;
-    animation: invisible 3s ease-in-out;
-}
-
-h1{
-    text-align: center;
-    text-decoration: underline;
-    margin-top: 5%;
-    animation: entrance 2s ease-in-out;
-}
-
-h2{
-    animation: dynamique 3s infinite ease-in-out;
-    text-align: center;
-}
-
-p{
-    margin: 5%;
-    font-size: 20px;
-    font-style: italic;
-}
-
-@media screen and (max-width: 768px) {
-    div{
-        border: none;
-        width: 100%;
-    }
-}
->>>>>>> 8235893944aa226df3e57fe65da93eabdf850617

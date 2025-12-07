@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8">
@@ -14,14 +13,28 @@
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-link">HOME</a>
-      <a href="home.html" class="nav-link">ABOUT</a>
-      <a href="articles.html" class="nav-link">ARTICLES</a>
-      <a href="glossary.html" class="nav-link">GLOSSARY</a>
-      <a href="references.html" class="nav-link">REFERENCES</a>
-      <a href="quiz.html" class="nav-link">QUIZ</a>
-      <a href="contact.html" class="nav-link active">CONTACT</a>
+    <div class="nav-shell">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SM</span>
+        <span class="brand-text">
+          <span class="brand-name">Smart Medicine</span>
+          <span class="brand-tagline">AI & Health</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home.html" class="nav-link">About</a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+        <a href="references.html" class="nav-link">References</a>
+        <a href="quiz.html" class="nav-link">Quiz</a>
+        <a href="contact.html" class="nav-link nav-cta active">Contact</a>
+      </div>
     </div>
   </nav>
 
@@ -104,6 +117,7 @@
     </div>
   </div>
 
+  <script src="navbar.js"></script>
   <script>
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
@@ -133,46 +147,4 @@
   </script>
 </body>
 
-=======
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-  <div class="container">
-    <h1>CONTACT US</h1>
-
-    <a class="fancy" href="https://wa.me/+33758845585">
-        <span class="top-key"></span>
-        <span class="text">Whatsapp</span>
-        <span class="bottom-key-1"></span>
-        <span class="bottom-key-2"></span>
-    </a>
-     
-    <a class="fancy" href="mailto:abderhamia@gmail.com">
-      <span class="top-key"></span>
-      <span class="text">Gmail</span>
-      <span class="bottom-key-1"></span>
-      <span class="bottom-key-2"></span>
-    </a>
-
-    <a class="fancy" href="https://www.instagram.com/nzm__style/profilecard/?igsh=MTVvNGRwdm80em05Yg==">
-      <span class="top-key"></span>
-      <span class="text">Instagram</span>
-      <span class="bottom-key-1"></span>
-      <span class="bottom-key-2"></span>
-    </a>
-
-    <a class="fancy" href="https://github.com/naaazim">
-      <span class="top-key"></span>
-      <span class="text">Github</span>
-      <span class="bottom-key-1"></span>
-      <span class="bottom-key-2"></span>
-    </a>
-
-  </div>  
-  </body>
->>>>>>> 8235893944aa226df3e57fe65da93eabdf850617
 </html>
