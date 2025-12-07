@@ -4,6 +4,8 @@
 
 ![Smart Medicine](smartmedicine.jpeg)
 
+**Live site:** https://frustating-email.alwaysdata.net/smart-medicine/
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
